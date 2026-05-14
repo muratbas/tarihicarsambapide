@@ -20,7 +20,10 @@ export default function ProductsPage() {
   const [order, setOrder] = useState(0);
   const [isAvailable, setIsAvailable] = useState(true);
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
-  const [imageUrl, setImageUrl] = useState("");
+  
+  // Image state
+  const [imageFile, setImageFile] = useState<File | null>(null);
+  const [currentImageUrl, setCurrentImageUrl] = useState("");
 
   useEffect(() => {
     fetchData();
@@ -57,7 +60,8 @@ export default function ProductsPage() {
     setOrder(products.length > 0 ? products[products.length - 1].order + 1 : 1);
     setIsAvailable(true);
     setSelectedCategories([]);
-    setImageUrl("");
+    setImageFile(null);
+    setCurrentImageUrl("");
     setIsModalOpen(true);
   };
 
@@ -69,14 +73,15 @@ export default function ProductsPage() {
     setOrder(prod.order);
     setIsAvailable(prod.isAvailable);
     setSelectedCategories(prod.categoryIds || []);
-    setImageUrl(prod.imageUrl || "");
+    setImageFile(null);
+    setCurrentImageUrl(prod.imageUrl || "");
     setIsModalOpen(true);
   };
 
   const handleDelete = async (prod: Product) => {
     if (confirm(`"${prod.name}" ürününü silmek istediğinize emin misiniz?`)) {
       try {
-        await deleteProduct(prod.id);
+        await deleteProduct(prod.id, prod.imageUrl);
         fetchData();
       } catch (error) {
         console.error("Hata:", error);
@@ -110,13 +115,12 @@ export default function ProductsPage() {
         order,
         isAvailable,
         categoryIds: selectedCategories,
-        imageUrl
       };
 
       if (editingId) {
-        await updateProduct(editingId, productData);
+        await updateProduct(editingId, productData, imageFile || undefined, currentImageUrl);
       } else {
-        await addProduct(productData);
+        await addProduct(productData, imageFile || undefined);
       }
       setIsModalOpen(false);
       fetchData();
@@ -169,7 +173,7 @@ export default function ProductsPage() {
                     <td className="px-6 py-4">
                       {prod.imageUrl ? (
                         <div className="w-12 h-12 rounded-lg bg-stone-100 overflow-hidden relative">
-                          <img src={prod.imageUrl} alt={prod.name} className="w-full h-full object-cover" onError={(e) => { e.currentTarget.style.display = 'none'; }} />
+                          <img src={prod.imageUrl} alt={prod.name} className="w-full h-full object-cover" />
                         </div>
                       ) : (
                         <div className="w-12 h-12 rounded-lg bg-stone-100 flex items-center justify-center text-stone-400">
@@ -279,18 +283,21 @@ export default function ProductsPage() {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-semibold text-stone-700 mb-1.5">Görsel URL (İsteğe Bağlı)</label>
+                    <label className="block text-sm font-semibold text-stone-700 mb-1.5">Ürün Görseli Yükle</label>
                     <input
-                      type="url"
-                      value={imageUrl}
-                      onChange={(e) => setImageUrl(e.target.value)}
-                      placeholder="https://ornek.com/resim.jpg"
-                      className="w-full px-4 py-3 bg-stone-50 border border-stone-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all text-stone-900"
+                      type="file"
+                      accept="image/*"
+                      onChange={(e) => {
+                        if (e.target.files && e.target.files[0]) {
+                          setImageFile(e.target.files[0]);
+                        }
+                      }}
+                      className="w-full text-sm text-stone-500 file:mr-4 file:py-2.5 file:px-4 file:rounded-xl file:border-0 file:text-sm file:font-semibold file:bg-primary file:text-white hover:file:bg-orange-600 file:transition-colors file:cursor-pointer bg-stone-50 border border-stone-200 rounded-xl"
                     />
-                    {imageUrl && (
-                      <div className="mt-3 flex items-start gap-2">
-                        <img src={imageUrl} alt="Preview" className="h-16 w-16 object-cover rounded-lg border border-stone-200 bg-stone-100" onError={(e) => e.currentTarget.style.display = 'none'} />
-                        <span className="text-xs text-stone-500 mt-1">Önizleme</span>
+                    {currentImageUrl && !imageFile && (
+                      <div className="mt-3">
+                        <p className="text-xs text-stone-500 mb-1">Mevcut Görsel:</p>
+                        <img src={currentImageUrl} alt="Preview" className="h-20 w-20 object-cover rounded-lg border border-stone-200" />
                       </div>
                     )}
                   </div>
