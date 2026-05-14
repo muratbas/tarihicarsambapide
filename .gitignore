@@ -39,3 +39,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Memory Bank and Agent Rules
+/memory-bank/
+AGENTS.md
+AGENTS.md.tmp
