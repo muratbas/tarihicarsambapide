@@ -27,7 +27,7 @@ export default function HomePage() {
               Menüyü İncele
               <ArrowRight className="h-5 w-5" />
             </Link>
-            <a href="tel:+905555555555" className="w-full sm:w-auto px-8 py-4 bg-white/10 text-white backdrop-blur-md rounded-full font-heading font-bold text-lg hover:bg-white/20 transition-all flex items-center justify-center gap-2 border border-white/10">
+            <a href="tel:03628542626" className="w-full sm:w-auto px-8 py-4 bg-white/10 text-white backdrop-blur-md rounded-full font-heading font-bold text-lg hover:bg-white/20 transition-all flex items-center justify-center gap-2 border border-white/10">
               Hemen Sipariş Ver
             </a>
           </div>
@@ -69,3 +69,4 @@ export default function HomePage() {
     </div>
   );
 }
+

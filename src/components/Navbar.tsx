@@ -49,18 +49,18 @@ export default function Navbar() {
 
           {/* Actions */}
           <div className="hidden md:flex items-center space-x-4">
-            <a href="tel:+905555555555" className="flex items-center gap-2 bg-primary text-white px-6 py-2.5 rounded-full font-heading font-bold hover:brightness-110 transition-all shadow-[0_4px_14px_0_rgba(234,88,12,0.39)] hover:shadow-[0_6px_20px_rgba(234,88,12,0.23)] transform hover:-translate-y-0.5">
+            <a href="tel:03628542626" className="flex items-center gap-2 bg-primary text-white px-6 py-2.5 rounded-full font-heading font-bold hover:brightness-110 transition-all shadow-[0_4px_14px_0_rgba(234,88,12,0.39)] hover:shadow-[0_6px_20px_rgba(234,88,12,0.23)] transform hover:-translate-y-0.5">
               <Phone className="h-4 w-4" />
               Sipariş Ver
             </a>
-            <a href="https://maps.google.com" target="_blank" rel="noreferrer" className="p-3 bg-black/5 text-foreground rounded-full hover:bg-primary hover:text-white transition-all shadow-sm hover:shadow-md" title="Yol Tarifi Al">
+            <a href="https://maps.app.goo.gl/tYd7tuxftZAVmZ189" target="_blank" rel="noreferrer" className="p-3 bg-black/5 text-foreground rounded-full hover:bg-primary hover:text-white transition-all shadow-sm hover:shadow-md" title="Yol Tarifi Al">
               <MapPin className="h-5 w-5" />
             </a>
           </div>
 
           {/* Mobile menu button */}
           <div className="flex items-center md:hidden gap-3">
-            <a href="tel:+905555555555" className="p-2.5 bg-primary text-white rounded-full shadow-md active:scale-95 transition-transform">
+            <a href="tel:03628542626" className="p-2.5 bg-primary text-white rounded-full shadow-md active:scale-95 transition-transform">
               <Phone className="h-5 w-5 fill-current" />
             </a>
             <button
@@ -91,11 +91,11 @@ export default function Navbar() {
           <Link href="/iletisim" onClick={() => setIsOpen(false)} className="block px-4 py-3 text-lg font-medium text-foreground hover:bg-orange-50 hover:text-primary rounded-xl transition-colors">İletişim</Link>
           
           <div className="pt-6 flex gap-4 px-2">
-            <a href="https://maps.google.com" target="_blank" rel="noreferrer" className="flex-1 flex justify-center items-center gap-2 bg-stone-100 text-foreground px-4 py-3.5 rounded-2xl font-semibold hover:bg-stone-200 transition-colors">
+            <a href="https://maps.app.goo.gl/tYd7tuxftZAVmZ189" target="_blank" rel="noreferrer" className="flex-1 flex justify-center items-center gap-2 bg-stone-100 text-foreground px-4 py-3.5 rounded-2xl font-semibold hover:bg-stone-200 transition-colors">
               <MapPin className="h-5 w-5" />
               Konum
             </a>
-            <a href="tel:+905555555555" className="flex-1 flex justify-center items-center gap-2 bg-primary text-white px-4 py-3.5 rounded-2xl font-semibold shadow-lg shadow-orange-500/30 hover:shadow-orange-500/50 transition-shadow">
+            <a href="tel:03628542626" className="flex-1 flex justify-center items-center gap-2 bg-primary text-white px-4 py-3.5 rounded-2xl font-semibold shadow-lg shadow-orange-500/30 hover:shadow-orange-500/50 transition-shadow">
               <Phone className="h-5 w-5 fill-current" />
               Hemen Ara
             </a>
@@ -105,3 +105,4 @@ export default function Navbar() {
     </nav>
   );
 }
+
