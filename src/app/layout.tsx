@@ -15,8 +15,11 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Tarihi Çarşamba Pide",
-  description: "Tarihi Çarşamba Pide - QR Menü ve Sipariş",
+  title: {
+    template: "%s | Tarihi Çarşamba Pide",
+    default: "Tarihi Çarşamba Pide",
+  },
+  description: "Yılların ustalık tecrübesiyle hazırlanan, enfes malzemelerle taş fırında pişen çıtır pidelerimizle tanışın.",
 };
 
 export default function RootLayout({

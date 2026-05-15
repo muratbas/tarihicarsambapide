@@ -10,11 +10,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 mb-12">
           {/* Brand & Description */}
           <div className="space-y-4">
-            <Link href="/" className="flex items-center gap-2 group">
-              <div className="bg-primary/20 p-2 rounded-xl group-hover:bg-primary transition-colors">
-                <Utensils className="h-6 w-6 text-primary group-hover:text-white transition-colors" />
-              </div>
-              <span className="text-2xl font-heading font-bold text-white tracking-tight">Tarihi Çarşamba</span>
+            <Link href="/" className="flex items-center group inline-block">
+              <img src="/logo.svg" alt="Tarihi Çarşamba Pide Logo" className="h-40 sm:h-48 w-auto object-contain bg-white rounded-[2.5rem] p-4 shadow-lg transition-transform group-hover:scale-105" />
             </Link>
             <p className="text-stone-400 text-sm leading-relaxed max-w-sm">
               Yılların getirdiği tecrübe ile en lezzetli pideleri odun ateşinde pişirerek sizlere sunuyoruz. Lezzet dolu anlar için doğru adrestesiniz.
@@ -66,7 +63,7 @@ export default function Footer() {
             &copy; {currentYear} Tarihi Çarşamba Pide. Tüm hakları saklıdır.
           </p>
           <p className="text-stone-500 text-sm">
-            Developed by <a href="https://muratbas.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-orange-400 font-bold transition-colors">muratbas.com</a>
+            <a href="https://muratbas.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-orange-400 font-bold transition-colors">muratbas.com</a> tarafından geliştirildi.
           </p>
         </div>
       </div>

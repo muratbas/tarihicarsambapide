@@ -11,12 +11,11 @@ export default function Navbar() {
   return (
     <nav className="bg-background/90 backdrop-blur-md sticky top-0 z-50 border-b border-black/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-20">
+        <div className="flex justify-between h-24 sm:h-28">
           {/* Logo */}
-          <div className="flex-shrink-0 flex items-center">
-            <Link href="/" className="font-heading font-bold text-2xl text-primary flex items-center gap-2 group">
-              <div className="bg-primary text-white p-2 rounded-xl leading-none shadow-md group-hover:scale-105 transition-transform">TÇ</div>
-              <span className="hidden sm:block tracking-tight">Tarihi Çarşamba</span>
+          <div className="flex-shrink-0 flex items-center py-2">
+            <Link href="/" className="flex items-center group">
+              <img src="/logo.svg" alt="Tarihi Çarşamba Pide Logo" className="h-20 sm:h-24 w-auto object-contain transition-transform group-hover:scale-105" />
             </Link>
           </div>
 
