@@ -47,7 +47,7 @@ export default function Footer() {
               </li>
               <li className="flex flex-col">
                 <span className="text-stone-500 mb-1">Telefon:</span>
-                <a href="tel:03628542626" className="text-stone-400 hover:text-primary transition-colors">0 362 854 26 26</a>
+                <a href="tel:+905424602564" className="text-stone-400 hover:text-primary transition-colors">+90 542 460 25 64</a>
               </li>
               <li className="flex flex-col">
                 <span className="text-stone-500 mb-1">E-Posta:</span>

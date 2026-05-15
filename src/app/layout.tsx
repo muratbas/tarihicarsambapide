@@ -20,6 +20,9 @@ export const metadata: Metadata = {
     default: "Tarihi Çarşamba Pide",
   },
   description: "Yılların ustalık tecrübesiyle hazırlanan, enfes malzemelerle taş fırında pişen çıtır pidelerimizle tanışın.",
+  icons: {
+    icon: "/logo.svg",
+  },
 };
 
 export default function RootLayout({

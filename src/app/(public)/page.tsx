@@ -27,7 +27,7 @@ export default function HomePage() {
               Menüyü İncele
               <ArrowRight className="h-5 w-5" />
             </Link>
-            <a href="tel:03628542626" className="w-full sm:w-auto px-8 py-4 bg-white/10 text-white backdrop-blur-md rounded-full font-heading font-bold text-lg hover:bg-white/20 transition-all flex items-center justify-center gap-2 border border-white/10">
+            <a href="tel:+905424602564" className="w-full sm:w-auto px-8 py-4 bg-white/10 text-white backdrop-blur-md rounded-full font-heading font-bold text-lg hover:bg-white/20 transition-all flex items-center justify-center gap-2 border border-white/10">
               Hemen Sipariş Ver
             </a>
           </div>
@@ -131,10 +131,10 @@ export default function HomePage() {
           <p className="text-orange-100 text-lg sm:text-xl mb-10 max-w-2xl mx-auto font-medium">
             Hemen bizi arayın, siparişinizi hazırlayalım veya masanızı rezerve edelim. Sıcak sıcak kapınıza veya masanıza gelsin.
           </p>
-          <a href="tel:03628542626" className="inline-flex flex-col sm:flex-row items-center justify-center gap-4 bg-white text-stone-900 px-10 py-5 rounded-2xl font-heading font-bold text-xl sm:text-2xl hover:scale-105 transition-transform shadow-2xl">
+          <a href="tel:+905424602564" className="inline-flex flex-col sm:flex-row items-center justify-center gap-4 bg-white text-stone-900 px-10 py-5 rounded-2xl font-heading font-bold text-xl sm:text-2xl hover:scale-105 transition-transform shadow-2xl">
             <div className="flex items-center gap-3">
               <PhoneCall className="h-6 w-6 text-primary" />
-              <span>0 362 854 26 26</span>
+              <span>+90 542 460 25 64</span>
             </div>
             <span className="text-sm sm:text-base font-normal text-stone-500 sm:border-l sm:border-stone-300 sm:pl-4">Şimdi Ara</span>
           </a>

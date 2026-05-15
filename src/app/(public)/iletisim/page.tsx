@@ -15,7 +15,7 @@ export default function ContactPage() {
               <Phone className="h-8 w-8" />
             </div>
             <h3 className="font-heading font-bold text-xl text-stone-800 mb-2">Telefon</h3>
-            <a href="tel:03628542626" className="text-stone-600 hover:text-primary transition-colors font-medium">0 362 854 26 26</a>
+            <a href="tel:+905424602564" className="text-stone-600 hover:text-primary transition-colors font-medium">+90 542 460 25 64</a>
           </div>
 
           <div className="bg-white p-8 rounded-3xl shadow-lg border border-black/5 text-center flex flex-col items-center">
