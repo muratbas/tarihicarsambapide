@@ -70,7 +70,7 @@ export default function HomePage() {
             <div className="lg:w-1/2 relative">
               <div className="absolute inset-0 bg-primary/10 rounded-[3rem] transform rotate-3 scale-105"></div>
               <img 
-                src="https://images.unsplash.com/photo-1590947132387-155cc02f3212?q=80&w=2070&auto=format&fit=crop" 
+                src="/images/hikaye.webp" 
                 alt="Pide Ustası" 
                 className="relative rounded-[3rem] shadow-2xl object-cover h-[500px] w-full"
               />
@@ -125,7 +125,7 @@ export default function HomePage() {
 
       {/* Call to Action Section */}
       <section className="py-20 bg-primary relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center opacity-10 mix-blend-multiply" />
+        <div className="absolute inset-0 bg-[url('/images/cta-bg.webp')] bg-cover bg-center opacity-10 mix-blend-multiply" />
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <h2 className="text-4xl sm:text-5xl font-heading font-bold text-white mb-6">Acıktınız Mı?</h2>
           <p className="text-orange-100 text-lg sm:text-xl mb-10 max-w-2xl mx-auto font-medium">

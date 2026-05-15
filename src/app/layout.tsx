@@ -28,8 +28,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="tr" className={`${lora.variable} ${outfit.variable} antialiased`}>
-      <body className="min-h-screen flex flex-col bg-background text-foreground font-sans">
+    <html lang="tr" className={`${lora.variable} ${outfit.variable} antialiased`} suppressHydrationWarning>
+      <body className="min-h-screen flex flex-col bg-background text-foreground font-sans" suppressHydrationWarning>
         {children}
       </body>
     </html>
